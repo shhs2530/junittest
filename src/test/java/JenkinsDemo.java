@@ -35,18 +35,4 @@ public class JenkinsDemo
         Assert.assertTrue(driver.getTitle().contains("google"));
     }
     
-    
-    @Ignore
-    @Test
-    public void testCaseFailed()
-    {
-        Assert.assertTrue(driver.findElement(By.xpath("//form[@id='failed case']")).isDisplayed());
-    }
-
-    @Ignore
-    @Test
-    public void testCaseIgnored()
-    {
-        Assert.assertTrue(driver.findElement(By.xpath("//form[@id='ignored case']")).isDisplayed());
-    }
 }
