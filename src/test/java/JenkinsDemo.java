@@ -32,7 +32,7 @@ public class JenkinsDemo
     @Test
     public void testCasePassed()
     {
-        Assert.assertTrue(driver.getTitle().contains("google"));
+        Assert.assertTrue(driver.getTitle().contains("Google"));
     }
     
 }
