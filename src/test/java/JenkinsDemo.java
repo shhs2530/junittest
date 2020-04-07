@@ -8,17 +8,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
- * Created by burakergoren
  * Sample junit test code to integrate by
  */
 public class JenkinsDemo
 {
-    private static String Base_Url = "https://www.facebook.com";
+    private static String Base_Url = "https://www.google.com";
     private WebDriver driver;
 
     @Before
     public void setUp()
     {
+    	System.setProperty("webdriver.chrome.driver", "C:\\opt\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(Base_Url);
     }
@@ -32,7 +32,7 @@ public class JenkinsDemo
     @Test
     public void testCasePassed()
     {
-        Assert.assertTrue(driver.findElement(By.xpath("//form[@id='login_form']")).isDisplayed());
+        Assert.assertTrue(driver.getTitle().contains("google"));
     }
 
     @Test
